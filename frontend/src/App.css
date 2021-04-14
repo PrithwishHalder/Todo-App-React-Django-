@@ -2,6 +2,67 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    background-color: #000;
-    color: #fff;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1.05em;
+}
+body {
+    background-color: #b8b5ff;
+}
+.Todo {
+    width: fit-content;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.Todo > * {
+    background-color: #fff;
+    padding: 1em 0;
+}
+.newTaskForm {
+    padding: 1em;
+    margin-bottom: 1em;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=15, Direction=0, Color=#B8B5FF)"; /*IE 8*/
+    -moz-box-shadow: 0 5px 15px -4px #b8b5ff; /*FF 3.5+*/
+    -webkit-box-shadow: 0 5px 15px -4px #b8b5ff; /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+    box-shadow: 0 5px 15px -4px #b8b5ff; /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=15, Direction=135, Color=#B8B5FF); /*IE 5.5-7*/
+}
+.addTask,
+.newTask {
+    padding: 0.3em 0.5em;
+    margin: 0.5em 0;
+    border: none;
+    outline: none;
+    caret-color: #cccccc;
+}
+.newTask {
+    border: 1px solid #ccc;
+}
+.addTask {
+    background-color: #ccc;
+    color: #7868e6;
+    font-weight: 700;
+    cursor: pointer;
+}
+.task,
+.task-option {
+    display: flex;
+    justify-content: space-between;
+}
+.task {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    background-color: #e4fbff;
+    margin: 5px 0.5em;
+    border-radius: 6px;
+}
+.task-option > div {
+    margin: 0 0.5em;
+}
+
+.task:hover {
+    background-color: #cccccc;
+    cursor: pointer;
 }

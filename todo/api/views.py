@@ -15,6 +15,7 @@ def apiurls(request):
         "Task Detail": "taskDetail/<id>/",
         "New Task": "newTask/",
         "Task Update": "taskUpdate/<id>/",
+        "Task Delete": "taskDelete/<id>/",
     }
     return Response(urls)
 
@@ -54,3 +55,11 @@ def taskUpdate(request, id):
         serializer.save()
 
     return Response(serializer.data)
+
+
+@api_view(['DELETE'])
+def taskDelete(request, id):
+    task = Task.objects.get(id=id)
+    task.delete()
+
+    return Response("Task Deleted!!!")
